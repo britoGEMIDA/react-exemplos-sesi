@@ -66,7 +66,7 @@ const Board = () => {
                 <Square value={squares[8]} onClick={() => handleClick(8)} />
             </div>
             {/* Botão para reiniciar o jogo */}
-            <button className="reset-button" onClick={restartGame}>Reiniar Jogo
+            <button className="reset-button" onClick={restartGame}>Reiniciar Jogo
             </button>
         </div>
     );
