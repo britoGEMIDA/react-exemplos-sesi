@@ -9,7 +9,7 @@ const Board = () => {
     const [xIsNext, setXIsNext] = useState(true);
 
     //Função para calcular o vencedor com base nos quadrados preenchidos
-    const winner = calculateWinner(squares);
+    const winner = calculaWinner(squares);
     
     //Função para lidar com o clique em um quadrado
     const handleClick = (i) => {
@@ -38,14 +38,15 @@ const Board = () => {
     //Renderização do componente
     return (
         <div>
-            <div className="Status">
-                Status(" ")
+            <div className="status">
+                Status("1V1")
                 {winner ? (
                     //Exibe o vencedor se houver um
-                    <p className="winner">O vencedor é: {winner}!</p>
+                    <p className="winner">O vencedor é: 
+                    {xIsNext ? " Fernando" : " Valmir"}</p>
                 ) : (
                     //Exibe o próximo jogador se não houve vencedor
-                    `Próximo a jogar: ${xIsNext ? "X" : "O"}`
+                    `Próximo a jogar: ${xIsNext ? "Fernando" : "Valmir"}`
                 )}
             </div>
             {/* Renderização das linhas do tabuleiro com componentes Square */}
